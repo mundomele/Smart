@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Smartmirror</title>
+	<title>Smartmirror 2</title>
 	<style type="text/css">
 		<?php include('css/main.css') ?>
 	</style>
