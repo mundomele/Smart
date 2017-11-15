@@ -38,13 +38,6 @@ $.urlParam = function(name, url) {
 
 jQuery(document).ready(function($) {
     
-    $("#botonValor").click(function(){
-        if ($("#reloj").hasClass('top_medium')){
-            $("#reloj").removeClass("top_medium");
-        }else{
-            $("#reloj").addClass("top_medium");
-        }
-    });
     
 	var mirroruser = $.urlParam('user');
 	

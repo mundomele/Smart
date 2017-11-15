@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-	<title>Smartmirror 2 </title>
+	<title>Smartmirror</title>
 	<style type="text/css">
 		<?php include('css/main.css') ?>
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
 	<script type="text/javascript">
-		var gitHash = '<?php echo trim(`git rev-parse HEAD`) ?>';
+		var gitHash = '<?php echo trim('git rev-parse HEAD') ?>';
 	</script>
 	<meta name="google" value="notranslate" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -39,7 +39,6 @@
             <div class="newshead newsh medium"></div>
             
         </div>
-<button style="bottom: 0px;position:absolute;" id="botonValor"> valor</button>
 <script src="js/addons/jquery.js"></script>
 <script src="js/addons/jquery.feedToJSON.js"></script>
 <script src="js/addons/ical_parser.js"></script>

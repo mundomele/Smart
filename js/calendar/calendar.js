@@ -94,6 +94,24 @@ calendar.getCalendarData = function(url, color, callback) {
 				}
 				e.seconds = seconds;
 			}
+                        
+                
+                
+                
+                
+                
+                else if(seconds >= -86400 && seconds <0) {
+                            time_string ="Cumpleaños";
+				if (e.RRULE) {
+					this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string,'color':color});
+				}
+				e.seconds = seconds;
+                        }
+                        
+                        
+                        
+                        
+                        
 			
 			// Special handling for rrule events
 			if (e.RRULE) {
@@ -102,8 +120,14 @@ calendar.getCalendarData = function(url, color, callback) {
 				var rule = new RRule(options);
 				
 				// TODO: don't use fixed end date here, use something like now() + 1 year
-				var dates = rule.between(new Date(), new Date(2016,11,31), true, function (date, i){return i < 10});
+                                var fechaza = new Date();
+                                var yearF = fechaza.getFullYear();
+                                var monthF = fechaza.getMonth();
+                                var dayF = fechaza.getDate();
+                                var fechita = new Date(yearF + 1, monthF, dayF)
+				var dates = rule.between(new Date(), new Date(yearF + 1, monthF, dayF), true, function (date, i){return i < 10});
 				for (date in dates) {
+                                    
 					var dt = new Date(dates[date]);
 					var days = moment(dt).diff(moment(), 'days');
 					var seconds = moment(dt).diff(moment(), 'seconds');
@@ -112,10 +136,20 @@ calendar.getCalendarData = function(url, color, callback) {
 						if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
 							var time_string = moment(dt).fromNow();
 						} else {
-							var time_string = moment(dt).calendar()
+							var time_string = moment(startDate).calendar();
+                                                        
+                                                        time_string = time_string.replace("mañana a las", "mañ");
+                                                        time_string = time_string.replace("mañana a la", "mañ");
 						}
 						this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string,'color':color});
-					}           
+					} 
+                                        else if(seconds >= -86400 && seconds <0) {
+                            time_string ="Cumpleaños";
+				if (!e.RRULE) {
+					this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string,'color':color});
+				}
+				e.seconds = seconds;
+                        }
 				}
 			}
 		};
@@ -139,7 +173,6 @@ calendar.updateCalendar = function (eventList) {
 	var len = eventList.length > calendar.calendarMaxItems ? calendar.calendarMaxItems : eventList.length;
 	for (var i = 0; i < len; i++) {
 		var e = eventList[i];
-                
                 var descripcion = e.description.substr(0,22);
                 if(e.description.length > 22) descripcion+="...";
                 
