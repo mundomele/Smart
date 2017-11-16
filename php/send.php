@@ -72,5 +72,8 @@
 	fwrite($handle, $config);
 
 	fclose($handle);
-	header('refresh: 1; URL=http://meleradas.esy.es/proyectos/Smartmirror/config/index.php');
+        $directorio = explode("/", $_SERVER[REQUEST_URI]);
+        $meleradas="";
+        if( $_SERVER[HTTP_HOST]  == "meleradas.esy.es") $meleradas = "/Smartmirror";
+	header('refresh: 1; URL=http://'.$_SERVER[HTTP_HOST].'/'.$directorio[1].$meleradas.'/config/index.php');
 
