@@ -31,6 +31,7 @@
                 <li class="pure-menu-item"><a href="#news-group" class="pure-menu-link">		News</a></li>
                 <li class="pure-menu-item"><a href="#calendar-group" class="pure-menu-link">	Calendar</a></li>
                 <li class="pure-menu-item"><a href="#openhab-group" class="pure-menu-link">		Openhab</a></li>
+                <li class="pure-menu-item"><a href="#money-group" class="pure-menu-link">		Money</a></li>        
         </div>
     </div>
 
@@ -80,6 +81,12 @@
 						<div class="pure-u-4-24">
 							<select class="pure-input-1" name="f7" value="" id="f7"></select>
 						</div>
+                                                <div class="pure-u-11-24"></div>
+                                                <div class="pure-u-7-24">Money</div>
+						<div class="pure-u-4-24">
+							<select class="pure-input-1" name="f8" value="" id="f8"></select>
+						</div>
+                                                <div class="pure-u-11-24"></div>
 					</div>
 				</fieldset>
 				
@@ -239,6 +246,29 @@
 					</div>
 				</fieldset>
 				
+                                <fieldset id="money-group">
+                                    <h2 class="content-subhead" >Hucha: <span id="mostrarfondos"></span>€ </h2>
+					<h3 class="content-subhead">Agregar fondos</h3>
+                                        <div class="pure-g">
+						<div class="pure-u-11-24">
+							<input class="pure-u-1" id="actual" type="number" step="any" name="actual" value="" required=""  hidden>
+						</div>
+					</div>
+					<div class="pure-g">
+						<div class="pure-u-11-24">
+							<input class="pure-u-1" id="agrefon" type="number" step="any" name="agrefonmoney" placeholder="Inserte valor" value="0" required="">
+						</div>
+					</div>
+                                        <h3 class="content-subhead">Retirar fondos</h3>
+					<div class="pure-g">
+						<div class="pure-u-11-24">
+							<input class="pure-u-1" id="retfon" type="number"  step="any" name="retfonmoney" placeholder="Inserte valor" value="0" required="">
+						</div>
+					</div>
+				</fieldset>
+                            
+                            
+                            
 				<fieldset id="openhab-group">
 					<h2 class="content-subhead">Openhab Configuration</h2>
 					<h3 class="content-subhead">Update,Fade and Fetch-interval (ms)</h3>
@@ -323,8 +353,8 @@
 	        toggleClass(menu, active);
 	        toggleClass(menuLink, active);
 	    };
-
-	}(this, this.document));
+            
+    }(this, this.document));
 </script>
 </body>
 </html>

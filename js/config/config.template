@@ -7,6 +7,7 @@ var config = {
 		openhab: {%feature.openhab%},
 		time: {%feature.time%},
 		weather: {%feature.weather%},
+                money: {%feature.money%},
                 wunderlist: {%feature.wunderlist%}
 	},
     lang: {%lang%},
@@ -14,6 +15,11 @@ var config = {
         timeFormat: {%time.timeFormat%},
         timePosition: {%time.timePosition%}
     },
+
+    money:{
+        valor: {%money.valor%}
+    },
+
     weather: {
 	interval: {%weather.interval%},
 	fadeInterval: {%weather.fadeinterval%},

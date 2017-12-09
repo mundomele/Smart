@@ -76,6 +76,10 @@ jQuery(document).ready(function($) {
 	if (config.feature.weather=='on'){
 	weather.init();
 	}
+        
+        if (config.feature.money=='on'){
+	money.init();
+	}
    
 
 

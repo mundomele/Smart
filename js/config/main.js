@@ -110,6 +110,8 @@ $(document).ready(function () {
 	$('#feature-group select#f5').val(_config.feature.time);
 	$('#feature-group select#f6').val(_config.feature.weather);
         $('#feature-group select#f7').val(_config.feature.wunderlist);
+        $('#feature-group select#f8').val(_config.feature.money);
+        
 	// Set the language value
 	$('#language-group select').val(_config.lang);
 	// Set the time values
@@ -194,6 +196,12 @@ $(document).ready(function () {
 		$('#openhab-feeds').append(_input);
 		$('#openhab-feeds-remove').append(_button);
 	});
+        
+        
+        //Añadir el valor actual de la hucha
+        $("#mostrarfondos").html(parseFloat(_config.money.valor));
+        $('#actual').attr("value",_config.money.valor);
+        
 	// Append the final "Add" button for adding another news feed
 	$('#openhab-feeds-remove').append(createAddButton(_config.openhab.feed.length, 'ohafeed[]', 'openhab feed'));
 });

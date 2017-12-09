@@ -1,19 +1,25 @@
 var config = {
-    lastUpdate: '2017-08-08T14:14:41+00:00',
+    lastUpdate: '2017-12-09T19:57:19+00:00',
 	feature: {
 		calendar: "on",
-		compliments: "on",
+		compliments: "off",
 		news: "on",
 		openhab: "off",
 		time: "on",
 		weather: "on",
-                wunderlist: "off"
+                money: "off",
+                wunderlist: "on"
 	},
     lang: "es_ES",
     time: {
         timeFormat: "24",
-        timePosition: "tm"
+        timePosition: "tl"
     },
+
+    money:{
+        valor: 10.09
+    },
+ 
     weather: {
 	interval: 6000,
 	fadeInterval: 1000,
@@ -39,13 +45,12 @@ var config = {
     },
 	calendar: {
 		maxItemsDisplayed: 10,
-	    interval: 1000,
+	    interval: 60000,
 		fadeInterval: 1000,
 		fetchInterval: 60000,
 		calendars: [
-			{url: "https://calendar.google.com/calendar/ical/mundomele%40gmail.com/private-92bce97beb6aa67113e1de4d1b01f4e1/basic.ics",color: "#04FF00",slice: "99"},
-			{url: "https://calendar.google.com/calendar/ical/webmelero%40gmail.com/private-13a49a2191b410cf9abfa863dc14abd8/basic.ics",color: "#FFFFFF",slice: "99"},
-			{url: "https://calendar.google.com/calendar/ical/es.spain%23holiday%40group.v.calendar.google.com/public/basic.ics",color: "#FF2F2F",slice: "99"}
+			{url: "https://calendar.google.com/calendar/ical/mundomele%40gmail.com/private-92bce97beb6aa67113e1de4d1b01f4e1/basic.ics",color: "#FFFFFF",slice: "99"},
+			{url: "https://calendar.google.com/calendar/ical/webmelero%40gmail.com/private-13a49a2191b410cf9abfa863dc14abd8/basic.ics",color: "#FF0000",slice: "99"}
 		],
     },
 	openhab: {

@@ -19,6 +19,7 @@
             <div id="reloj" class="">
                 <div class="date small dimmed"></div>
                 <div class="time"></div>
+                
             </div>
             <div class="calendar xxsmall"></div>
                 
@@ -39,6 +40,7 @@
             <div class="newshead newsh medium"></div>
             
         </div>
+    <div class="money"></div>
 <script src="js/addons/jquery.js"></script>
 <script src="js/addons/jquery.feedToJSON.js"></script>
 <script src="js/addons/ical_parser.js"></script>
@@ -52,6 +54,7 @@
 <!-- <script src="js/openhab/openhab.js" type="text/javascript"></script> -->
 <script src="js/time/time.js" type="text/javascript"></script>
 <script src="js/news/news.js" type="text/javascript"></script>
+<script src="js/money/money.js" type="text/javascript"></script>
 <script src="js/wunderlist/wunderlist.js" type="text/javascript"></script>
 <script src="js/main.js?nocache=<?php echo md5(microtime()) ?>"></script>
 <!-- <script src="js/addons/socket.io.min.js"></script> -->

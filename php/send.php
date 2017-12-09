@@ -16,7 +16,11 @@
 	$feature['time'] 		= (string)"\"" . $_GET['f5'] . "\"";
 	$feature['weather'] 	= (string)"\"" . $_GET['f6'] . "\"";
         $feature['wunderlist'] 	= (string)"\"" . $_GET['f7'] . "\"";
+        $feature['money'] 	= (string)"\"" . $_GET['f8'] . "\"";
 	
+        $money = [];
+        $money['valor'] = (float)((float)$_GET['actual'] + (float)$_GET['agrefonmoney'] - (float)$_GET['retfonmoney']);
+        
 	$weather = [];
 	$weather['interval'] 		= (string) $_GET['ivweat'];
 	$weather['fadeinterval']	= (string) $_GET['faweat'];
@@ -56,10 +60,10 @@
 	$openhab['feed'] = "\"" . implode('","', $_GET['ohafeed']) . "\"";
 
 	// Locations that will be replaced
-	$replaceLocations = array('{%feature.calendar%}','{%feature.wunderlist%}', '{%feature.compliments%}', '{%feature.news%}', '{%feature.openhab%}', '{%feature.time%}', '{%feature.weather%}', '{%lastupdate%}', '{%lang%}', '{%time.timeFormat%}', '{%time.timePosition%}', '{%weather.interval%}', '{%weather.fadeinterval%}', '{%weather.location%}', '{%weather.units%}', '{%weather.APPID%}', '{%compliments.interval%}', '{%compliments.fadeinterval%}', '{%compliments.morning%}', '{%compliments.afternoon%}', '{%compliments.evening%}', '{%news.interval%}', '{%news.fadeinterval%}','{%news.fetchinterval%}','{%news.feed%}', '{%calendar.maxitems%}', '{%calendar.interval%}', '{%calendar.fadeinterval%}', '{%calendar.fetchinterval%}', '{%calendar.feed%}' ,'{%openhab.interval%}' ,'{%openhab.fadeinterval%}' ,'{%openhab.fetchinterval%}' ,'{%openhab.feed%}');
+	$replaceLocations = array('{%feature.money%}','{%money.valor%}','{%feature.calendar%}','{%feature.wunderlist%}', '{%feature.compliments%}', '{%feature.news%}', '{%feature.openhab%}', '{%feature.time%}', '{%feature.weather%}', '{%lastupdate%}', '{%lang%}', '{%time.timeFormat%}', '{%time.timePosition%}', '{%weather.interval%}', '{%weather.fadeinterval%}', '{%weather.location%}', '{%weather.units%}', '{%weather.APPID%}', '{%compliments.interval%}', '{%compliments.fadeinterval%}', '{%compliments.morning%}', '{%compliments.afternoon%}', '{%compliments.evening%}', '{%news.interval%}', '{%news.fadeinterval%}','{%news.fetchinterval%}','{%news.feed%}', '{%calendar.maxitems%}', '{%calendar.interval%}', '{%calendar.fadeinterval%}', '{%calendar.fetchinterval%}', '{%calendar.feed%}' ,'{%openhab.interval%}' ,'{%openhab.fadeinterval%}' ,'{%openhab.fetchinterval%}' ,'{%openhab.feed%}');
 
 	// Items that will replace the placeholders
-	$replaceValues = array($feature['calendar'],$feature['wunderlist'], $feature['compliments'], $feature['news'], $feature['openhab'], $feature['time'], $feature['weather'], $date, $language, $timeFormat, $timePosition, $weather['interval'], $weather['fadeinterval'], $weather['q'], $weather['units'], $weather['APPID'], $compliments['interval'], $compliments['fadeinterval'], $compliments['morning'], $compliments['afternoon'], $compliments['evening'], $news['interval'], $news['fadeinterval'], $news['fetchinterval'], $news['feed'], $calendar['maxitems'], $calendar['interval'], $calendar['fadeinterval'], $calendar['fetchinterval'], $calendar['feed'], $openhab['interval'], $openhab['fadeinterval'], $openhab['fetchinterval'], $openhab['feed']);
+	$replaceValues = array($feature['money'],$money['valor'],$feature['calendar'],$feature['wunderlist'], $feature['compliments'], $feature['news'], $feature['openhab'], $feature['time'], $feature['weather'], $date, $language, $timeFormat, $timePosition, $weather['interval'], $weather['fadeinterval'], $weather['q'], $weather['units'], $weather['APPID'], $compliments['interval'], $compliments['fadeinterval'], $compliments['morning'], $compliments['afternoon'], $compliments['evening'], $news['interval'], $news['fadeinterval'], $news['fetchinterval'], $news['feed'], $calendar['maxitems'], $calendar['interval'], $calendar['fadeinterval'], $calendar['fetchinterval'], $calendar['feed'], $openhab['interval'], $openhab['fadeinterval'], $openhab['fetchinterval'], $openhab['feed']);
 	
 	// Get the template file
 	$config = file_get_contents($templateFile, true);
@@ -77,3 +81,4 @@
         if( $_SERVER[HTTP_HOST]  == "meleradas.esy.es") $meleradas = "/Smartmirror";
 	header('refresh: 1; URL=http://'.$_SERVER[HTTP_HOST].'/'.$directorio[1].$meleradas.'/config/index.php');
 
+        
