@@ -201,6 +201,16 @@ $(document).ready(function () {
         //Añadir el valor actual de la hucha
         $("#mostrarfondos").html(parseFloat(_config.money.valor));
         $('#actual').attr("value",_config.money.valor);
+        $('#actualuncen').attr("value",_config.money.monedas.uncent);
+        $('#actualdoscen').attr("value",_config.money.monedas.doscent);
+        $('#actualcincocen').attr("value",_config.money.monedas.cincocent);
+        $('#actualdiezcen').attr("value",_config.money.monedas.diezcent);
+        $('#actualveintecen').attr("value",_config.money.monedas.veintecent);
+        $('#actualcincen').attr("value",_config.money.monedas.cinccent);
+        $('#actualuneuro').attr("value",_config.money.monedas.uneuro);
+        $('#actualdoseuro').attr("value",_config.money.monedas.doseuro);
+        
+        console.log(_config.money.monedas.uncent);
         
 	// Append the final "Add" button for adding another news feed
 	$('#openhab-feeds-remove').append(createAddButton(_config.openhab.feed.length, 'ohafeed[]', 'openhab feed'));

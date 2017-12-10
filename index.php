@@ -41,6 +41,83 @@
             
         </div>
     <div class="money"></div>
+    <div class="moneytable">
+        <table>
+            <tr id="mostuncent">
+                <td>
+                   0,01 €
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostdoscent">
+                <td>
+                   0,02 €
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostcincocent">
+                <td>
+                   0,05 €
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostdiezcent">
+                <td>
+                   0,1 € 
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostveintecent">
+                <td>
+                   0,2 €
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostcunccent">
+                <td>
+                   0,5 € 
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostuneuro">
+                <td>
+                   1 €
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr id="mostdoseuro">
+                <td>
+                   2 € 
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
 <script src="js/addons/jquery.js"></script>
 <script src="js/addons/jquery.feedToJSON.js"></script>
 <script src="js/addons/ical_parser.js"></script>

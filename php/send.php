@@ -19,7 +19,36 @@
         $feature['money'] 	= (string)"\"" . $_GET['f8'] . "\"";
 	
         $money = [];
-        $money['valor'] = (float)((float)$_GET['actual'] + (float)$_GET['agrefonmoney'] - (float)$_GET['retfonmoney']);
+        /*
+        $money['uncent'] = (float)((float)$_GET['actualuncen'] + ((float)$_GET['sumuncen'] * 0.01) - ((float)$_GET['resuncen']) * 0.01);
+        $money['doscent'] = (float)((float)$_GET['actualdoscen'] + ((float)$_GET['sumdoscen'] * 0.02) - ((float)$_GET['resdoscen']) * 0.02);
+        $money['cincocent'] = (float)((float)$_GET['actualcincocen'] + ((float)$_GET['sumcincocen'] * 0.05) - ((float)$_GET['rescincocen']) * 0.05);
+        $money['diezcent'] = (float)((float)$_GET['actualdiezcen'] + ((float)$_GET['sumdiezcen'] * 0.1) - ((float)$_GET['resdiezcen']) * 0.1);
+        $money['veintecent'] = (float)((float)$_GET['actualveintecen'] + ((float)$_GET['sumveintecen'] * 0.2) - ((float)$_GET['resveintecen']) * 0.2);
+        $money['cinccent'] = (float)((float)$_GET['actualcincen'] + ((float)$_GET['sumcincent'] * 0.5) - ((float)$_GET['rescincent']) * 0.5);
+        $money['uneuro'] = (float)((float)$_GET['actualuneuro'] + ((float)$_GET['sumuneuro'] * 1) - ((float)$_GET['resuneuro']) * 1);
+        $money['doseuro'] = (float)((float)$_GET['actualdoseuro'] + ((float)$_GET['sumdoseuro'] * 2) - ((float)$_GET['resdoseuro']) * 2);
+        */
+        
+        $money['auncent'] = $_GET['sumuncen'] - $_GET['resuncen'];
+        $money['adoscent'] = $_GET['sumdoscen'] - $_GET['resdoscen'];
+        $money['acincocent'] =$_GET['sumcincocen'] - $_GET['rescincocen'];
+        $money['adiezcent'] = $_GET['sumdiezcen'] - $_GET['resdiezcen'];
+        $money['aveintecent'] =  + $_GET['sumveintecen'] - $_GET['resveintecen'];
+        $money['acinccent'] =  + $_GET['sumcincent'] - $_GET['rescincent'];
+        $money['auneuro'] =  + $_GET['sumuneuro'] - $_GET['resuneuro'];
+        $money['adoseuro'] =  + $_GET['sumdoseuro'] - $_GET['resdoseuro'];
+        
+        
+        $money['uncent'] = $_GET['actualuncen'] + $_GET['sumuncen'] - $_GET['resuncen'];
+        $money['doscent'] = $_GET['actualdoscen'] +$_GET['sumdoscen'] - $_GET['resdoscen'];
+        $money['cincocent'] = $_GET['actualcincocen'] + $_GET['sumcincocen'] - $_GET['rescincocen'];
+        $money['diezcent'] = $_GET['actualdiezcen'] + $_GET['sumdiezcen'] - $_GET['resdiezcen'];
+        $money['veintecent'] = $_GET['actualveintecen'] + $_GET['sumveintecen'] - $_GET['resveintecen'];
+        $money['cinccent'] = $_GET['actualcincen'] + $_GET['sumcincent'] - $_GET['rescincent'];
+        $money['uneuro'] = $_GET['actualuneuro'] + $_GET['sumuneuro'] - $_GET['resuneuro'];
+        $money['doseuro'] = $_GET['actualdoseuro'] + $_GET['sumdoseuro'] - $_GET['resdoseuro'];
+        $money['valor'] = $_GET['actual'] + ($money['auncent']*0.01) + ($money['adoscent']*0.02) + ($money['acincocent']*0.05) + ($money['adiezcent']*0.1) + ($money['aveintecent']*0.2) + ($money['acinccent']*0.5) + ($money['auneuro']*1) + ($money['adoseuro']*2);
         
 	$weather = [];
 	$weather['interval'] 		= (string) $_GET['ivweat'];
@@ -59,11 +88,16 @@
 	$openhab['fetchinterval'] = (string) $_GET['feoha'];
 	$openhab['feed'] = "\"" . implode('","', $_GET['ohafeed']) . "\"";
 
+        
+        
+        
+        
+                
 	// Locations that will be replaced
-	$replaceLocations = array('{%feature.money%}','{%money.valor%}','{%feature.calendar%}','{%feature.wunderlist%}', '{%feature.compliments%}', '{%feature.news%}', '{%feature.openhab%}', '{%feature.time%}', '{%feature.weather%}', '{%lastupdate%}', '{%lang%}', '{%time.timeFormat%}', '{%time.timePosition%}', '{%weather.interval%}', '{%weather.fadeinterval%}', '{%weather.location%}', '{%weather.units%}', '{%weather.APPID%}', '{%compliments.interval%}', '{%compliments.fadeinterval%}', '{%compliments.morning%}', '{%compliments.afternoon%}', '{%compliments.evening%}', '{%news.interval%}', '{%news.fadeinterval%}','{%news.fetchinterval%}','{%news.feed%}', '{%calendar.maxitems%}', '{%calendar.interval%}', '{%calendar.fadeinterval%}', '{%calendar.fetchinterval%}', '{%calendar.feed%}' ,'{%openhab.interval%}' ,'{%openhab.fadeinterval%}' ,'{%openhab.fetchinterval%}' ,'{%openhab.feed%}');
+	$replaceLocations = array('{%feature.money%}','{%money.valor%}','{%money.uncent%}','{%money.doscent%}','{%money.cincocent%}','{%money.diezcent%}','{%money.veintecent%}','{%money.cinccent%}','{%money.uneuro%}','{%money.doseuro%}','{%feature.calendar%}','{%feature.wunderlist%}', '{%feature.compliments%}', '{%feature.news%}', '{%feature.openhab%}', '{%feature.time%}', '{%feature.weather%}', '{%lastupdate%}', '{%lang%}', '{%time.timeFormat%}', '{%time.timePosition%}', '{%weather.interval%}', '{%weather.fadeinterval%}', '{%weather.location%}', '{%weather.units%}', '{%weather.APPID%}', '{%compliments.interval%}', '{%compliments.fadeinterval%}', '{%compliments.morning%}', '{%compliments.afternoon%}', '{%compliments.evening%}', '{%news.interval%}', '{%news.fadeinterval%}','{%news.fetchinterval%}','{%news.feed%}', '{%calendar.maxitems%}', '{%calendar.interval%}', '{%calendar.fadeinterval%}', '{%calendar.fetchinterval%}', '{%calendar.feed%}' ,'{%openhab.interval%}' ,'{%openhab.fadeinterval%}' ,'{%openhab.fetchinterval%}' ,'{%openhab.feed%}');
 
 	// Items that will replace the placeholders
-	$replaceValues = array($feature['money'],$money['valor'],$feature['calendar'],$feature['wunderlist'], $feature['compliments'], $feature['news'], $feature['openhab'], $feature['time'], $feature['weather'], $date, $language, $timeFormat, $timePosition, $weather['interval'], $weather['fadeinterval'], $weather['q'], $weather['units'], $weather['APPID'], $compliments['interval'], $compliments['fadeinterval'], $compliments['morning'], $compliments['afternoon'], $compliments['evening'], $news['interval'], $news['fadeinterval'], $news['fetchinterval'], $news['feed'], $calendar['maxitems'], $calendar['interval'], $calendar['fadeinterval'], $calendar['fetchinterval'], $calendar['feed'], $openhab['interval'], $openhab['fadeinterval'], $openhab['fetchinterval'], $openhab['feed']);
+	$replaceValues = array($feature['money'],$money['valor'], $money['uncent'],$money['doscent'],$money['cincocent'],$money['diezcent'],$money['veintecent'],$money['cinccent'],$money['uneuro'],$money['doseuro'],$feature['calendar'],$feature['wunderlist'], $feature['compliments'], $feature['news'], $feature['openhab'], $feature['time'], $feature['weather'], $date, $language, $timeFormat, $timePosition, $weather['interval'], $weather['fadeinterval'], $weather['q'], $weather['units'], $weather['APPID'], $compliments['interval'], $compliments['fadeinterval'], $compliments['morning'], $compliments['afternoon'], $compliments['evening'], $news['interval'], $news['fadeinterval'], $news['fetchinterval'], $news['feed'], $calendar['maxitems'], $calendar['interval'], $calendar['fadeinterval'], $calendar['fetchinterval'], $calendar['feed'], $openhab['interval'], $openhab['fadeinterval'], $openhab['fetchinterval'], $openhab['feed']);
 	
 	// Get the template file
 	$config = file_get_contents($templateFile, true);

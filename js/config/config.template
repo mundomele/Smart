@@ -17,7 +17,17 @@ var config = {
     },
 
     money:{
-        valor: {%money.valor%}
+        valor: {%money.valor%},
+        monedas: {
+            uncent: {%money.uncent%},
+            doscent: {%money.doscent%},
+            cincocent: {%money.cincocent%},
+            diezcent: {%money.diezcent%},
+            veintecent: {%money.veintecent%},
+            cinccent: {%money.cinccent%},
+            uneuro: {%money.uneuro%},
+            doseuro: {%money.doseuro%}
+        }
     },
 
     weather: {

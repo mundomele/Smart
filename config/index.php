@@ -248,23 +248,206 @@
 				
                                 <fieldset id="money-group">
                                     <h2 class="content-subhead" >Hucha: <span id="mostrarfondos"></span>€ </h2>
-					<h3 class="content-subhead">Agregar fondos</h3>
+					
                                         <div class="pure-g">
-						<div class="pure-u-11-24">
+                                                <div class="pure-u-24-24">
 							<input class="pure-u-1" id="actual" type="number" step="any" name="actual" value="" required=""  hidden>
 						</div>
-					</div>
-					<div class="pure-g">
-						<div class="pure-u-11-24">
-							<input class="pure-u-1" id="agrefon" type="number" step="any" name="agrefonmoney" placeholder="Inserte valor" value="0" required="">
+						<div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualuncen" type="number" step="any" name="actualuncen" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualdoscen" type="number" step="any" name="actualdoscen" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualcincocen" type="number" step="any" name="actualcincocen" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualdiezcen" type="number" step="any" name="actualdiezcen" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualveintecen" type="number" step="any" name="actualveintecen" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualcincen" type="number" step="any" name="actualcincen" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualuneuro" type="number" step="any" name="actualuneuro" value="" required=""  hidden>
+						</div>
+                                                <div class="pure-u-24-24">
+							<input class="pure-u-1" id="actualdoseuro" type="number" step="any" name="actualdoseuro" value="" required=""  hidden>
 						</div>
 					</div>
-                                        <h3 class="content-subhead">Retirar fondos</h3>
 					<div class="pure-g">
-						<div class="pure-u-11-24">
-							<input class="pure-u-1" id="retfon" type="number"  step="any" name="retfonmoney" placeholder="Inserte valor" value="0" required="">
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="pure-u-12-24">
+							<h3 class="content-subhead">Agregar fondos</h3>
 						</div>
+                                                <div class="pure-u-12-24">
+							<h3 class="content-subhead">Retirar fondos</h3>
+						</div>
+                                            
+                                            
+                                            
+                                            
+                                                <div class="pure-u-4-24">
+							Moneda: 0,01€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumuncen" type="number" step="any" name="sumuncen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 0,01€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="resuncen" type="number" step="any" name="resuncen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 0,02€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumdoscen" type="number" step="any" name="sumdoscen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 0,02€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="resdoscen" type="number" step="any" name="resdoscen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 0,05€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumcincocen" type="number" step="any" name="sumcincocen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 0,05€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="rescincocen" type="number" step="any" name="rescincocen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 0,1€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumdiezcen" type="number" step="any" name="sumdiezcen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 0,1€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="resdiezcen" type="number" step="any" name="resdiezcen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 0,2€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumveintecen" type="number" step="any" name="sumveintecen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 0,2€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="resveintecen" type="number" step="any" name="resveintecen" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 0,5€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumcincent" type="number" step="any" name="sumcincent" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 0,5€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="rescincent" type="number" step="any" name="rescincent" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 1€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumuneuro" type="number" step="any" name="sumuneuro" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 1€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="resuneuro" type="number" step="any" name="resuneuro" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                <div class="pure-u-4-24">
+							Moneda: 2€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="sumdoseuro" type="number" step="any" name="sumdoseuro" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                <div class="pure-u-4-24">
+							Moneda: 2€
+						</div>
+						<div class="pure-u-2-24">
+							<input class="pure-u-1" id="resdoseuro" type="number" step="any" name="resdoseuro" placeholder="Inserte valor" value="0" required="">
+						</div>
+                                                <div class="pure-u-6-24"></div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
 					</div>
+                                        
 				</fieldset>
                             
                             

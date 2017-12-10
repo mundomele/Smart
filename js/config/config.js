@@ -1,5 +1,5 @@
 var config = {
-    lastUpdate: '2017-12-09T19:57:19+00:00',
+    lastUpdate: '2017-12-10T13:37:03+00:00',
 	feature: {
 		calendar: "on",
 		compliments: "off",
@@ -17,9 +17,19 @@ var config = {
     },
 
     money:{
-        valor: 10.09
+        valor: 0,
+        monedas: {
+            uncent: 0,
+            doscent: 0,
+            cincocent: 0,
+            diezcent: 0,
+            veintecent: 0,
+            cinccent: 0,
+            uneuro: 0,
+            doseuro: 0
+        }
     },
- 
+
     weather: {
 	interval: 6000,
 	fadeInterval: 1000,
