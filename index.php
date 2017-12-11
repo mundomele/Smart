@@ -40,9 +40,11 @@
             <div class="newshead newsh medium"></div>
             
         </div>
-    <div class="money"></div>
     <div class="moneytable">
         <table>
+            <thead>
+            <td colspan="3" class="money"></td>
+            </thead>
             <tr id="mostuncent">
                 <td>
                    0,01 €

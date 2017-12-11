@@ -1,5 +1,5 @@
 var config = {
-    lastUpdate: '2017-12-10T13:37:03+00:00',
+    lastUpdate: '2017-12-11T20:57:20+01:00',
 	feature: {
 		calendar: "on",
 		compliments: "off",
@@ -7,7 +7,7 @@ var config = {
 		openhab: "off",
 		time: "on",
 		weather: "on",
-                money: "off",
+                money: "on",
                 wunderlist: "on"
 	},
     lang: "es_ES",
