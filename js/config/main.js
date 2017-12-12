@@ -111,6 +111,7 @@ $(document).ready(function () {
 	$('#feature-group select#f6').val(_config.feature.weather);
         $('#feature-group select#f7').val(_config.feature.wunderlist);
         $('#feature-group select#f8').val(_config.feature.money);
+        $('#feature-group select#f9').val(_config.feature.twitter);
         
 	// Set the language value
 	$('#language-group select').val(_config.lang);
@@ -209,8 +210,8 @@ $(document).ready(function () {
         $('#actualcincen').attr("value",_config.money.monedas.cinccent);
         $('#actualuneuro').attr("value",_config.money.monedas.uneuro);
         $('#actualdoseuro').attr("value",_config.money.monedas.doseuro);
+        $('#twac').attr("value",_config.twitter.cuentas);
         
-        console.log(_config.money.monedas.uncent);
         
 	// Append the final "Add" button for adding another news feed
 	$('#openhab-feeds-remove').append(createAddButton(_config.openhab.feed.length, 'ohafeed[]', 'openhab feed'));

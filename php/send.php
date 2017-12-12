@@ -17,6 +17,8 @@
 	$feature['weather'] 	= (string)"\"" . $_GET['f6'] . "\"";
         $feature['wunderlist'] 	= (string)"\"" . $_GET['f7'] . "\"";
         $feature['money'] 	= (string)"\"" . $_GET['f8'] . "\"";
+        
+        $feature['twitter'] 	= (string)"\"" . $_GET['f9'] . "\"";
 	
         $money = [];
         /*
@@ -90,14 +92,14 @@
 
         
         
-        
+        $twitter["cuentas"] = (string)"\"".$_GET["twac"]."\"";
         
                 
 	// Locations that will be replaced
-	$replaceLocations = array('{%feature.money%}','{%money.valor%}','{%money.uncent%}','{%money.doscent%}','{%money.cincocent%}','{%money.diezcent%}','{%money.veintecent%}','{%money.cinccent%}','{%money.uneuro%}','{%money.doseuro%}','{%feature.calendar%}','{%feature.wunderlist%}', '{%feature.compliments%}', '{%feature.news%}', '{%feature.openhab%}', '{%feature.time%}', '{%feature.weather%}', '{%lastupdate%}', '{%lang%}', '{%time.timeFormat%}', '{%time.timePosition%}', '{%weather.interval%}', '{%weather.fadeinterval%}', '{%weather.location%}', '{%weather.units%}', '{%weather.APPID%}', '{%compliments.interval%}', '{%compliments.fadeinterval%}', '{%compliments.morning%}', '{%compliments.afternoon%}', '{%compliments.evening%}', '{%news.interval%}', '{%news.fadeinterval%}','{%news.fetchinterval%}','{%news.feed%}', '{%calendar.maxitems%}', '{%calendar.interval%}', '{%calendar.fadeinterval%}', '{%calendar.fetchinterval%}', '{%calendar.feed%}' ,'{%openhab.interval%}' ,'{%openhab.fadeinterval%}' ,'{%openhab.fetchinterval%}' ,'{%openhab.feed%}');
+	$replaceLocations = array('{%feature.twitter%}','{%twitter.cuentas%}','{%feature.money%}','{%money.valor%}','{%money.uncent%}','{%money.doscent%}','{%money.cincocent%}','{%money.diezcent%}','{%money.veintecent%}','{%money.cinccent%}','{%money.uneuro%}','{%money.doseuro%}','{%feature.calendar%}','{%feature.wunderlist%}', '{%feature.compliments%}', '{%feature.news%}', '{%feature.openhab%}', '{%feature.time%}', '{%feature.weather%}', '{%lastupdate%}', '{%lang%}', '{%time.timeFormat%}', '{%time.timePosition%}', '{%weather.interval%}', '{%weather.fadeinterval%}', '{%weather.location%}', '{%weather.units%}', '{%weather.APPID%}', '{%compliments.interval%}', '{%compliments.fadeinterval%}', '{%compliments.morning%}', '{%compliments.afternoon%}', '{%compliments.evening%}', '{%news.interval%}', '{%news.fadeinterval%}','{%news.fetchinterval%}','{%news.feed%}', '{%calendar.maxitems%}', '{%calendar.interval%}', '{%calendar.fadeinterval%}', '{%calendar.fetchinterval%}', '{%calendar.feed%}' ,'{%openhab.interval%}' ,'{%openhab.fadeinterval%}' ,'{%openhab.fetchinterval%}' ,'{%openhab.feed%}');
 
 	// Items that will replace the placeholders
-	$replaceValues = array($feature['money'],$money['valor'], $money['uncent'],$money['doscent'],$money['cincocent'],$money['diezcent'],$money['veintecent'],$money['cinccent'],$money['uneuro'],$money['doseuro'],$feature['calendar'],$feature['wunderlist'], $feature['compliments'], $feature['news'], $feature['openhab'], $feature['time'], $feature['weather'], $date, $language, $timeFormat, $timePosition, $weather['interval'], $weather['fadeinterval'], $weather['q'], $weather['units'], $weather['APPID'], $compliments['interval'], $compliments['fadeinterval'], $compliments['morning'], $compliments['afternoon'], $compliments['evening'], $news['interval'], $news['fadeinterval'], $news['fetchinterval'], $news['feed'], $calendar['maxitems'], $calendar['interval'], $calendar['fadeinterval'], $calendar['fetchinterval'], $calendar['feed'], $openhab['interval'], $openhab['fadeinterval'], $openhab['fetchinterval'], $openhab['feed']);
+	$replaceValues = array($feature['twitter'],$twitter["cuentas"],$feature['money'],$money['valor'], $money['uncent'],$money['doscent'],$money['cincocent'],$money['diezcent'],$money['veintecent'],$money['cinccent'],$money['uneuro'],$money['doseuro'],$feature['calendar'],$feature['wunderlist'], $feature['compliments'], $feature['news'], $feature['openhab'], $feature['time'], $feature['weather'], $date, $language, $timeFormat, $timePosition, $weather['interval'], $weather['fadeinterval'], $weather['q'], $weather['units'], $weather['APPID'], $compliments['interval'], $compliments['fadeinterval'], $compliments['morning'], $compliments['afternoon'], $compliments['evening'], $news['interval'], $news['fadeinterval'], $news['fetchinterval'], $news['feed'], $calendar['maxitems'], $calendar['interval'], $calendar['fadeinterval'], $calendar['fetchinterval'], $calendar['feed'], $openhab['interval'], $openhab['fadeinterval'], $openhab['fetchinterval'], $openhab['feed']);
 	
 	// Get the template file
 	$config = file_get_contents($templateFile, true);

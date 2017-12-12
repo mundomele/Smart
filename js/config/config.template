@@ -8,9 +8,13 @@ var config = {
 		time: {%feature.time%},
 		weather: {%feature.weather%},
                 money: {%feature.money%},
+                twitter: {%feature.twitter%},
                 wunderlist: {%feature.wunderlist%}
 	},
     lang: {%lang%},
+    twitter: {
+        cuentas: {%twitter.cuentas%}
+    },
     time: {
         timeFormat: {%time.timeFormat%},
         timePosition: {%time.timePosition%}

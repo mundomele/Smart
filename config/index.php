@@ -31,7 +31,8 @@
                 <li class="pure-menu-item"><a href="#news-group" class="pure-menu-link">		News</a></li>
                 <li class="pure-menu-item"><a href="#calendar-group" class="pure-menu-link">	Calendar</a></li>
                 <li class="pure-menu-item"><a href="#openhab-group" class="pure-menu-link">		Openhab</a></li>
-                <li class="pure-menu-item"><a href="#money-group" class="pure-menu-link">		Money</a></li>        
+                <li class="pure-menu-item"><a href="#money-group" class="pure-menu-link">		Money</a></li>
+                <li class="pure-menu-item"><a href="#twitter-group" class="pure-menu-link">		Twitter</a></li>
         </div>
     </div>
 
@@ -85,6 +86,11 @@
                                                 <div class="pure-u-7-24">Money</div>
 						<div class="pure-u-4-24">
 							<select class="pure-input-1" name="f8" value="" id="f8"></select>
+						</div>
+                                                <div class="pure-u-11-24"></div>
+                                                <div class="pure-u-7-24">Twitter</div>
+						<div class="pure-u-4-24">
+							<select class="pure-input-1" name="f9" value="" id="f9"></select>
 						</div>
                                                 <div class="pure-u-11-24"></div>
 					</div>
@@ -477,7 +483,20 @@
 						</div>
 					</div>					
 				</fieldset>
-								
+				
+                            
+                                <fieldset id="twitter-group">
+					<h2 class="content-subhead">Twitter accounts</h2>
+					<h3 class="content-subhead">Write twitter accounts separate with , and without @</h3>
+					<div class="pure-g">
+						<div class="pure-u-6-24">
+							<input class="pure-u-1" id="twac" type="text" name="twac" placeholder="marca,as,mundodeportivo" value="marca,as,mundodeportivo" required>
+						</div>
+						<div class="pure-u-18-24"></div>
+						
+					</div>		
+				</fieldset>
+                            
 				<fieldset id="button-group">				
 					<h2 class="content-subhead"></h2>
 					<div class="pure-g">

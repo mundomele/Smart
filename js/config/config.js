@@ -1,5 +1,5 @@
 var config = {
-    lastUpdate: '2017-12-11T20:57:20+01:00',
+    lastUpdate: '2017-12-12T14:26:06+00:00',
 	feature: {
 		calendar: "on",
 		compliments: "off",
@@ -8,9 +8,13 @@ var config = {
 		time: "on",
 		weather: "on",
                 money: "on",
+                twitter: "on",
                 wunderlist: "on"
 	},
     lang: "es_ES",
+    twitter: {
+        cuentas: "survivetheark,ArkEsp,YOUARKesp"
+    },
     time: {
         timeFormat: "24",
         timePosition: "tl"

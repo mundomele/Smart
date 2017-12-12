@@ -80,7 +80,10 @@ jQuery(document).ready(function($) {
         if (config.feature.money=='on'){
 	money.init();
 	}
-   
+        
+        if (config.feature.twitter=='on'){
+	twitter.init();
+	}
 
 
 });

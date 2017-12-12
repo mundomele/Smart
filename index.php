@@ -40,6 +40,7 @@
             <div class="newshead newsh medium"></div>
             
         </div>
+    <div id="cajontwitter"></div>
     <div class="moneytable">
         <table>
             <thead>
@@ -47,7 +48,6 @@
             </thead>
             <tr id="mostuncent">
                 <td>
-                   0,01 €
                 </td>
                 <td>
                 </td>
@@ -56,7 +56,6 @@
             </tr>
             <tr id="mostdoscent">
                 <td>
-                   0,02 €
                 </td>
                 <td>
                 </td>
@@ -65,7 +64,6 @@
             </tr>
             <tr id="mostcincocent">
                 <td>
-                   0,05 €
                 </td>
                 <td>
                 </td>
@@ -74,7 +72,6 @@
             </tr>
             <tr id="mostdiezcent">
                 <td>
-                   0,1 € 
                 </td>
                 <td>
                 </td>
@@ -83,7 +80,6 @@
             </tr>
             <tr id="mostveintecent">
                 <td>
-                   0,2 €
                 </td>
                 <td>
                 </td>
@@ -92,7 +88,6 @@
             </tr>
             <tr id="mostcunccent">
                 <td>
-                   0,5 € 
                 </td>
                 <td>
                 </td>
@@ -101,7 +96,6 @@
             </tr>
             <tr id="mostuneuro">
                 <td>
-                   1 €
                 </td>
                 <td>
                 </td>
@@ -110,7 +104,6 @@
             </tr>
             <tr id="mostdoseuro">
                 <td>
-                   2 € 
                 </td>
                 <td>
                 </td>
@@ -134,6 +127,7 @@
 <script src="js/time/time.js" type="text/javascript"></script>
 <script src="js/news/news.js" type="text/javascript"></script>
 <script src="js/money/money.js" type="text/javascript"></script>
+<script src="js/twitter/twitter.js" type="text/javascript"></script>
 <script src="js/wunderlist/wunderlist.js" type="text/javascript"></script>
 <script src="js/main.js?nocache=<?php echo md5(microtime()) ?>"></script>
 <!-- <script src="js/addons/socket.io.min.js"></script> -->

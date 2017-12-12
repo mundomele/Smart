@@ -259,3 +259,25 @@ body, html {
 .moneytable td{
     padding-right: 10px;
 }
+
+#cajontwitter{
+    
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    font-family: monospace;
+}
+
+.twitter-bubble {
+    position: relative;
+    border: solid 3px #96DDFF;
+    width: 200px;
+    padding: 19px;
+    background: transparent;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #96DDFF;
+    display: inline-block;
+}
+
