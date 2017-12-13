@@ -257,31 +257,31 @@
 					
                                         <div class="pure-g">
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actual" type="number" step="any" name="actual" value="" required=""  hidden>
+							<input class="pure-u-1" id="actual" type="number" step="any" name="actual" value="" novalidate  hidden>
 						</div>
 						<div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualuncen" type="number" step="any" name="actualuncen" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualuncen" type="number" step="any" name="actualuncen" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualdoscen" type="number" step="any" name="actualdoscen" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualdoscen" type="number" step="any" name="actualdoscen" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualcincocen" type="number" step="any" name="actualcincocen" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualcincocen" type="number" step="any" name="actualcincocen" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualdiezcen" type="number" step="any" name="actualdiezcen" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualdiezcen" type="number" step="any" name="actualdiezcen" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualveintecen" type="number" step="any" name="actualveintecen" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualveintecen" type="number" step="any" name="actualveintecen" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualcincen" type="number" step="any" name="actualcincen" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualcincen" type="number" step="any" name="actualcincen" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualuneuro" type="number" step="any" name="actualuneuro" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualuneuro" type="number" step="any" name="actualuneuro" value="" novalidate  hidden>
 						</div>
                                                 <div class="pure-u-24-24">
-							<input class="pure-u-1" id="actualdoseuro" type="number" step="any" name="actualdoseuro" value="" required=""  hidden>
+							<input class="pure-u-1" id="actualdoseuro" type="number" step="any" name="actualdoseuro" value="" novalidate  hidden>
 						</div>
 					</div>
 					<div class="pure-g">
@@ -520,7 +520,6 @@
 <script src="../js/addons/jquery.js"></script>
 <script src="../js/config/config.js"></script>
 <script src="../js/config/main.js"></script>
-<script src="../js/config/button.js"></script>
 <script type="text/javascript">
 	(function (window, document) {
 
