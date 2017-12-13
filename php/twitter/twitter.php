@@ -21,7 +21,7 @@ for($b=0;$b<count($cuentas);$b++){
         {           
             array_push($devolver,'Error :'. $my_tweets[$b]->errors[1]->code. ' - '. $my_tweets[$b]->errors[1]->message);
         }else{
-            array_push($devolver,makeClickableLinks($my_tweets[$b][$i]->text)) ;
+            array_push($devolver,"<div class='cabeceratw'><img src='".$my_tweets[$b][$i]->user->profile_image_url."'><span>".$my_tweets[$b][$i]->user->screen_name."</span></div>".makeClickableLinks($my_tweets[$b][$i]->text)) ;
         }
     }
 }

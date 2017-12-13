@@ -281,3 +281,17 @@ body, html {
     display: inline-block;
 }
 
+.cabeceratw{
+    height: 48px;
+    margin-bottom: 4px;
+}
+
+.cabeceratw img{
+    margin-right: 10px;
+}
+
+.cabeceratw span{
+    position: relative;
+    top: -19px;
+}
+
